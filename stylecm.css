@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #f4f4f4;
+  background: #0f0f13;
+  overflow-x: hidden;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, #3b82f6, #0f0f13 70%);
+  z-index: -1;
+  animation: gradientMove 10s infinite alternate ease-in-out;
+}
+
+@keyframes gradientMove {
+  0% { background-position: left top; }
+  100% { background-position: right bottom; }
+}
+
+.header {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #ffffff;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #9ca3af;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 60vh;
+  padding: 2rem;
+}
+
+.list-section {
+  width: 90%;
+  max-width: 900px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.list-section h2 {
+  font-size: 2rem;
+  color: #60a5fa;
+  margin-bottom: 1.5rem;
+}
+
+.lists-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.list {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.list:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.list h3 {
+  color: #93c5fd;
+  margin-bottom: 0.5rem;
+}
+
+.list ul {
+  list-style: none;
+  text-align: left;
+}
+
+.list li {
+  padding: 0.3rem 0;
+  color: #e5e7eb;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.glow-btn {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  border: none;
+  color: white;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(59,130,246,0.6);
+  transition: all 0.3s ease;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 25px rgba(139,92,246,0.9);
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+footer .ghost {
+  color: #60a5fa;
+  font-weight: bold;
+  text-shadow: 0 0 10px #60a5fa;
+}
+
